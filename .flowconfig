@@ -1,0 +1,12 @@
+[ignore]
+.*/node_modules/babel-.*
+.*/lib/.*
+.*/couch-client/index\..*
+[include]
+
+[libs]
+libs/*
+[options]
+
+[version]
+0.19.1
