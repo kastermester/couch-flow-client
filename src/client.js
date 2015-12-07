@@ -15,7 +15,7 @@ export class CouchDBClient {
 		this.client = nano(host).use(database);
 	}
 
-	insert(doc: any, docName: string) : Promise {
+	insert(doc: any, docName: string) : Promise<NanoResponse> {
 		if (doc == null) {
 			throw new Error('Cannot insert null');
 		}
@@ -32,7 +32,7 @@ export class CouchDBClient {
 		}
 
 		if (doc._rev == null) {
-			throw new Error('Unspecified reivsion');
+			throw new Error('Unspecified revision');
 		}
 
 		return this.makePromise(done => this.client.insert(doc, docName, done));
