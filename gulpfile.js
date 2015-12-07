@@ -5,8 +5,9 @@ var clean = require('gulp-clean');
 
 gulp.task('copy-flow-files', function() {
 	gulp.src('src/**/*.js')
-		.pipe(rename({
-			suffix: '.flow',
+		.pipe(rename(function(path) {
+			path.basename += path.extname;
+			path.extname = '.flow';
 		}))
 		.pipe(gulp.dest('lib'));
 });

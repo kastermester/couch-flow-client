@@ -1,7 +1,5 @@
 [ignore]
 .*/node_modules/babel-.*
-.*/lib/.*
-.*/couch-flow-client/index\..*
 [include]
 
 [libs]
