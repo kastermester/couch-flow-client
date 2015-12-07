@@ -20,7 +20,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "prepublish": "gulp clean && babel src -d lib && gulp copy-flow-files"
+    "prepublish": "eslint . && flow check && gulp clean && babel src -d lib && gulp copy-flow-files"
   },
   "repository": {
     "type": "git",
