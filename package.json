@@ -1,6 +1,6 @@
 {
   "name": "couch-flow-client",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -20,7 +20,8 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "prepublish": "eslint . && flow check && gulp clean && babel src -d lib && gulp copy-flow-files"
+    "build": "eslint . && gulp clean && babel src -d lib && gulp copy-flow-files && flow check",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",

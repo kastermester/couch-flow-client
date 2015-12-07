@@ -1,5 +1,4 @@
 src/
-libs/
 .eslintignore
 .eslintrc
 .flowconfig

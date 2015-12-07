@@ -9,6 +9,46 @@ export type NanoResponse = {
 	header: NanoHeaders;
 };
 
+type NanoDBClient = {
+	insert: (
+		doc: any,
+		docName: string,
+		callback: (
+			err: any,
+			body: any,
+			header: NanoHeaders
+		) => void
+	) => void;
+
+	destroy: (
+		docName: string,
+		rev: string,
+		callback: (
+			err: any,
+			body: any,
+			header: NanoHeaders
+		) => void
+	) => void;
+
+	get: (
+		docName: string,
+		callback: (
+			err: any,
+			body: any,
+			header: NanoHeaders
+		) => void
+	) => void;
+
+	head: (
+		docName: string,
+		callback: (
+			err: any,
+			body: any,
+			header: NanoHeaders
+		) => void
+	) => void;
+};
+
 export class CouchDBClient {
 	client: NanoDBClient;
 	constructor(host: string, database: string) {
