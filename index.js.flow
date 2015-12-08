@@ -1,5 +1,5 @@
 /**
  * @flow
  */
-export { CouchDBClient as default } from './lib/client';
+export { default } from './lib/client';
 export type { NanoResponse, NanoHeaders } from './lib/client';

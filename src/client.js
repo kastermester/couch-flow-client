@@ -49,7 +49,7 @@ type NanoDBClient = {
 	) => void;
 };
 
-export class CouchDBClient {
+export default class CouchDBClient {
 	client: NanoDBClient;
 	constructor(host: string, database: string) {
 		this.client = nano(host).use(database);
