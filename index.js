@@ -1,1 +1,2 @@
-module.exports = require('./lib/index.js');
+require('regenerator/runtime');
+module.exports = require('./lib/client.js');
